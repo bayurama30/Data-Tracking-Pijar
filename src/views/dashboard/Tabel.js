@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './Tabel.css'
+import {
+    CCard,
+    CCardBody,
+    CCardHeader,
+    CCol,
+    CRow,
+  } from  '@coreui/react'
+  import CIcon from '@coreui/icons-react'
+  import { DocsLink } from 'src/reusable'
 
 
 const Data = ({
@@ -48,8 +57,18 @@ function Tabel() {
         }
  
     return (
-        <div className='container-fluid'>
-            <h1>JADWAL PIJAR KEMENAG KANWIL JABAR</h1>
+
+
+        <CRow>
+        <CCol>
+          <CCard>
+            <CCardHeader>
+            JADWAL PIJAR KEMENAG KANWIL JABAR
+            </CCardHeader>
+            <CCardBody>
+
+            <div class="table-responsive">
+            
             <br/>  
             <table className="table table-bordered table-striped">
                 <thead class="table-dark">
@@ -82,6 +101,10 @@ function Tabel() {
                 </table>
                  
         </div>
+            </CCardBody>
+          </CCard>
+        </CCol>
+      </CRow>
         )
     }
 
